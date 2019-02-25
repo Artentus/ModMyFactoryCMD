@@ -27,7 +27,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ModMyFactory.py" />
+    <Compile Include="Web\ApiDefinitions.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Web\FactorioAuth.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\FactorioDownload.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

@@ -1,11 +1,12 @@
 import sys
 import requests
+import ApiDefinitions
 
 
 API_DOMAIN = "https://auth.factorio.com"
 LOGIN_ENDPOINT = API_DOMAIN + "/api-login"
 
-class LoginError(Exception):
+class LoginError(ApiDefinitions.ApiError, ApiDefinitions.ServerError):
     """
     An error indicating an unsuccessful login atempt.
     
@@ -14,9 +15,6 @@ class LoginError(Exception):
     status_code : int
         The http status code returned by the server.
     """
-
-    message = ""
-    status_code = 0
 
     def __init__(self, message, status_code):
         """
